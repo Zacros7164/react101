@@ -15,6 +15,10 @@
 
     <script type="text/babel">
 
+        const name = "Robert Bunch";
+        const title = "React From the Beginning";
+        const saleOn = false;
+
         const markup = <div className="row">
                             <div className="col s2">
                                 <div className="card hoverable small">
@@ -22,11 +26,11 @@
                                         <img src="http://lorempixel.com/400/400/nature/" />
                                     </div>
                                     <div className="card-content">
-                                        <p>React From the Beginning</p>
-                                        <p>Robert Bunch</p>
+                                        <p>{title}</p>
+                                        <p>{name}</p>
                                     </div>
                                     <div className="card-action">
-                                        <a href="#">$9.99</a>
+                                        <a href="#">${saleOn ? 9.99 : 59.99}</a>
                                     </div>
                                 </div>
                             </div>    
