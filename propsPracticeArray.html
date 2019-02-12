@@ -15,15 +15,16 @@
     <script type="text/javascript" src="data.js"></script>
     <script type="text/babel" src="Card.js"></script>
     <script type="text/babel">
-        // ReactDOM takes 2 args
-        // 1. what to render
+
+        let cards = data.map((obj)=>{
+            return <Card course={obj.course} instructor = {obj.instructor} image={obj.image} />
+        })
+
         const app = <div className="row">
-                <Card image={data[0].image} course={data[0].course} instructor={data[0].instructor}/>
-                <Card image={data[1].image} course={data[1].course} instructor={data[1].instructor}/>
-                <Card image={data[2].image} course={data[2].course} instructor={data[2].instructor}/>
-                <Card image={data[3].image} course={data[3].course} instructor={data[3].instructor}/>
+                {cards}
             </div>
-        // 2. where to render it
+
+
         const root = document.getElementById('root')
         
         ReactDOM.render(app, root);
