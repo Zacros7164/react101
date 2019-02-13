@@ -8,19 +8,19 @@ function Card(props){
     const saleOn = false;
 
     return (
-            <div className="col s3">
-                <div className="card hoverable small">
-                    <div className="card-image">
-                        <img src={props.image} />
-                    </div>
-                    <div className="card-content">
-                        <p>{props.course}</p>
-                        <p>{props.instructor}</p>
-                    </div>
-                    <div className="card-action">
-                        <a href="#">${saleOn ? 9.99 : 59.99}</a>
-                    </div>
+        <div className="col s3">
+            <div className="card hoverable small">
+                <div className="card-image">
+                    <img src={props.image} />
                 </div>
-            </div>    
+                <div className="card-content">
+                    <p>{props.course}</p>
+                    <p>{props.instructor}</p>
+                </div>
+                <div className="card-action">
+                    <a href="#">${saleOn ? 9.99 : 59.99}</a>
+                </div>
+            </div>
+        </div>    
     )
 };
